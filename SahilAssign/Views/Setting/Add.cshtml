@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model SahilAssign.Models.AddSetting
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Setting
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Setting</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="Add">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Key</label>
+                        <input type="text" class="form-control" required id="" asp-for="Key">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Value</label>
+                        <input type="text" class="form-control" required id="" asp-for="Value">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Value2</label>
+                        <input type="text" class="form-control" id="" asp-for="Value2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="" asp-for="Description">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Created Date</label>
+                        <input type="date" class="form-control" id="" asp-for="Created">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">LastModified</label>
+                        <input type="date" class="form-control" id="" asp-for="LastModified">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿@model List<SahilAssign.Models.Domain.Setting>
+@{
+}
+
+<h3>Added List</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Key
+            </th>
+            <th>
+                Value
+            </th>
+            <th>
+                Value 2
+            </th>
+            <th>
+                Description 
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+               Last Modified 
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var dd in Model)
+        {
+            <tr>
+                <td>@dd.Key                   
+                </td>
+                <td>@dd.Value</td>
+                <td>@dd.Value2</td>
+                <td>@dd.Description</td>
+                <td>@dd.Created.ToString("dd-MM-yyyy")</td>
+                <td>@dd.LastModified.Value.ToString("dd-MM-yyyy")</td>
+                <td><a href="Setting/View/@dd.Id">Edit</a></td>
+                <td><a href="Setting/Delete/@dd.Id">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
